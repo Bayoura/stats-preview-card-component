@@ -6,8 +6,61 @@ html {
 }
 
 body {
+    background-color: var(--color-darkblue);
+    color: var(--color-white);
+    font-family: 'Inter', sans-serif;
     font-size: var(--font);
     margin: 0;
     padding: 0;
     line-height: 1.3;
+}
+
+#card {
+    
+    border-radius: 5px;
+    background-color: var(--color-blue); 
+    margin: 60px auto;
+    max-width: 340px;
+    width: 100%;
+}
+
+#img {
+    background-image: url(../images/image-header-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px 5px 0 0;
+    height: 275px;
+    position: relative;
+}
+
+#img:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(170, 92, 219, 0.486);
+    top: 0;
+  	left: 0;
+  	display: block;
+    content: "";
+}
+    
+#text-container {
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;   
+}
+
+#info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
