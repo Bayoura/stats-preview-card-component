@@ -12,37 +12,63 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: var(--font-size);
     line-height: 1.3;
+    margin: 20px;
 }
 
-#card {
+.card {
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
     background-color: var(--color-blue); 
-    margin: 60px auto;
-    max-width: 340px;
+    margin: 20px auto; 
     width: 100%;
 }
 
-#img {
-    background-image: url(../images/image-header-mobile.jpg);
+/*---------------IMAGES-------------- */
+
+.desktop-img {
+    display: none;
+}
+
+.img-container {
     background-color: var(--color-violet);
-    background-blend-mode: multiply;
+    position: relative;
+    border-radius: 5px 5px 0 0;
+}
+
+img {
+    display: block;
+    mix-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 5px 5px 0 0;
-    height: 275px;
+    width: 100%;
+    height: 100%;
 }
-    
-#text-container {
-    max-width: 300px;
+
+.violet {
+    border-radius: 5px 5px 0 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-violet);
+    opacity: 0.25;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+   
+/*---------------TEXT-CONTAINER----------------*/
+
+.text-container {
+    max-width: 100%;
     margin: 0 auto;
     text-align: center;
 }
 
-#text-container>h1 {
+.text-container>h1 {
     margin: 40px 0 20px 0;    
 }
 
-#text-container>p {
+.text-container>p {
     color: var(--color-transp-white);
     line-height: 1.7;
     margin: 0 10px;
@@ -52,13 +78,15 @@ h1>span {
     color: var(--color-violet);
 }
 
+/*--------INFO-CONTAINER------------*/
+
 ul {
     list-style: none;   
 }
 
-#info-container {
+.info-container {
     margin-top: 30px;   
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .info-package {
@@ -74,11 +102,54 @@ ul {
 
 .stat-heading {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.5625rem; /* 25px*/
 }
 
 .stat {
     color: var(--color-transp-white2);
     text-transform: uppercase;
-    padding: 10px;
+    padding: 10px;    
+}
+
+@media (min-width: 400px) {
+    #card {
+        width: 100%;
+    }
+
+    #text-container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (min-width: 1000px) {
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: block;
+    }
+
+    
+
+}
+
+/*
+
+
+@media (min-width: 900px) {
+    #card {
+        
+        max-width: 850px;
+    }
+    #img {
+        background-image: url(image-header-desktop.jpg);
+        
+    }
 }
