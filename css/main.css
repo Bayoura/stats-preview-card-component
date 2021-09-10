@@ -15,13 +15,21 @@ body {
     margin: 20px;
 }
 
+/* This centers the card */
+.card-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .card {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
     background-color: var(--color-blue); 
-    margin: 20px auto; 
-    width: 100%;
+    margin: 20px auto;   
 }
 
 /*---------------IMAGES-------------- */
@@ -34,6 +42,7 @@ body {
     background-color: var(--color-violet);
     position: relative;
     border-radius: 5px 5px 0 0;
+    min-width: 50%;
 }
 
 img {
@@ -58,20 +67,20 @@ img {
    
 /*---------------TEXT-CONTAINER----------------*/
 
-.text-container {
-    max-width: 100%;
-    margin: 0 auto;
+.text-box {
+    margin: 35px 20px;
     text-align: center;
 }
 
-.text-container>h1 {
-    margin: 40px 0 20px 0;    
+.text-box>h1 {
+    margin-bottom: 20px;    
 }
 
-.text-container>p {
+.text-box>p {
     color: var(--color-transp-white);
     line-height: 1.7;
-    margin: 0 10px;
+    margin: 0;
+    padding: 15px;
 }
 
 h1>span {
@@ -85,15 +94,11 @@ ul {
 }
 
 .info-container {
-    margin-top: 30px;   
-    padding-bottom: 15px;
+    margin-top: 20px;  
 }
 
 .info-package {
     padding: 10px;
-}
-
-.info-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,7 +108,7 @@ ul {
 .stat-heading {
     font-weight: bold;
     font-size: 1.5625rem; /* 25px*/
-}
+} 
 
 .stat {
     color: var(--color-transp-white2);
@@ -111,23 +116,9 @@ ul {
     padding: 10px;    
 }
 
-@media (min-width: 400px) {
-    #card {
-        width: 100%;
-    }
+/*-----------MEDIA-QUERIES---------------*/
 
-    #text-container {
-        width: 100%;
-    }
-}
-
-@media (min-width: 768px) {
-    .card {
-        flex-direction: row-reverse;
-    }
-}
-
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
     .mobile-img {
         display: none;
     }
@@ -136,20 +127,48 @@ ul {
         display: block;
     }
 
-    
-
-}
-
-/*
-
-
-@media (min-width: 900px) {
-    #card {
-        
-        max-width: 850px;
+    .card {
+        flex-direction: row-reverse;
     }
-    #img {
-        background-image: url(image-header-desktop.jpg);
-        
+
+    .img-container, .violet {
+        border-radius: 0 5px 5px 0;
+    }
+
+    .text-container { 
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-box {
+        max-width: 500px;
+        margin: 60px;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: flex-start;
+    }
+
+    .text-box > p {
+        padding: 0;
+    }
+
+    .info-container{
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .info-package {
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .stat {
+        padding: 10px 0;
     }
 }
