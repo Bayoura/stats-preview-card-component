@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot of my result
 
-![Screenshot_Frontend Mentor Stats preview card component](https://user-images.githubusercontent.com/82528904/132949634-3612eb7b-7dda-48b4-8b23-0d5fd0b62aae.png)
+![Screenshot_Frontend Mentor Stats preview card component](https://user-images.githubusercontent.com/82528904/132951043-cfcf5f72-63dd-495c-93c6-fbd85e69d37b.png)
 
 ### Links
 
