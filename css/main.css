@@ -6,30 +6,30 @@
     box-sizing: border-box;
 }
 
+/* If we were to put a margin other than auto or 0 in the body, a scrollbar would appear*/
+/* Margin Collapsing Causes Unexpected Scrollbar With 100vh Body In Webkit */
 body {
     background-color: var(--color-darkblue);
     color: var(--color-white);
     font-family: 'Inter', sans-serif;
     font-size: var(--font-size);
-    line-height: 1.3;
-    margin: 20px;
-}
+    line-height: 1.3; 
 
-/* This centers the card */
-.card-container {
+    /* This centers the card */
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
 
 .card {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
     background-color: var(--color-blue); 
-    margin: 20px auto;   
+    margin: 15px;  
+    max-width: 700px; 
 }
 
 /*---------------IMAGES-------------- */
@@ -40,9 +40,9 @@ body {
 
 .img-container {
     background-color: var(--color-violet);
-    position: relative;
     border-radius: 5px 5px 0 0;
     min-width: 50%;
+    position: relative;
 }
 
 img {
@@ -116,9 +116,30 @@ ul {
     padding: 10px;    
 }
 
+/*--------------FOOTER-------------------*/
+
+.attribution {
+    text-align: center;
+    color: var(--color-white);
+    padding-bottom: 5px;
+}
+
+a:link {
+    color: hsl(244, 61%, 69%);
+}
+
+a:visited {
+    color: hsl(244, 29%, 41%)
+}
+
+a:hover, a:active {
+    color: var(--color-violet);
+}
+
+
 /*-----------MEDIA-QUERIES---------------*/
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     .mobile-img {
         display: none;
     }
@@ -128,6 +149,8 @@ ul {
     }
 
     .card {
+        max-width: 100%;
+        margin: 30px;
         flex-direction: row-reverse;
     }
 
@@ -137,7 +160,6 @@ ul {
 
     .text-container { 
         padding: 0;
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -145,7 +167,7 @@ ul {
 
     .text-box {
         max-width: 500px;
-        margin: 60px;
+        margin: 40px 60px;
         text-align: justify;
         display: flex;
         flex-direction: column;
@@ -155,9 +177,11 @@ ul {
 
     .text-box > p {
         padding: 0;
+        padding-right: 25px;
     }
 
     .info-container{
+        margin-top: 60px;
         display: flex;
         flex-direction: row;
         gap: 40px;
